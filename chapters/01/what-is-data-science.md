@@ -9,7 +9,6 @@ Data science is about drawing useful conclusions from large and diverse data set
 *Inference: Quantifying our degree of certainty. This involves determining whether patterns found in data will also appear in new observations and assessing the accuracy of predictions using statistical tests and models.
 
 
-
 Statistics is a central component of data science because statistics
 studies how to make robust conclusions based on incomplete information. Computing
 is a central component because programming allows us to apply analysis
