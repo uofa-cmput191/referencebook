@@ -2,7 +2,7 @@
 
 1st Edition by [Rejwana Haque](https://apps.ualberta.ca/catalogue/instructor/rejwana1)
 
-This text is heavily inspired by the UC Berkeley course [Data 8: Foundations of Data Science][data8].
+This text is heavily adapted from the UC Berkeley course [Data 8: Foundations of Data Science][data8] with modifications to fit the CMPUT 191 course.
 
 You can [view this text online][ghpages] or [view the source][source].
 
