@@ -1,7 +1,7 @@
 What is Data Science?
 ====================
 
-Data science is about drawing useful conclusions from large and diverse data sets through exploration, prediction, and inference. It integrates techniques from statistics, computer science, mathematics, and domain-specific knowledge to analyze and interpret complex data sets.
+Data science is about drawing useful conclusions from large and diverse data sets through exploration, prediction, and inference. It integrates techniques from statistics, computer science, mathematics, and domain-specific knowledge to analyze and interpret complex data sets. There are three core aspects of effective data analysis:
 
 
 * Exploration: Identifying patterns in information. This involves using visualizations and descriptive statistics to understand the data.
