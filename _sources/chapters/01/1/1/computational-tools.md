@@ -5,8 +5,7 @@ This text uses the Python 3 programming language, along with a standard set of
 numerical and data visualization tools that are used widely in commercial
 applications, scientific experiments, and open-source projects.
 Python has recruited enthusiasts from many professions that use data to draw
-conclusions. By learning the Python language, you will join a
-million-person-strong community of software developers and data scientists.
+conclusions. We will explore the most common libraries used by data scientists community.
 
 **Getting Started.** The easiest way to write Python programs without installing the dependancies is to use Jupyter Notebook with Google Colab. You don't have to install any data science libraries to use them. If you use @ualberta.ca email to login to Google Colab and use Jupyter Notebook within cloud environment.
 
