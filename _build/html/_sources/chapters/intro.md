@@ -2,11 +2,12 @@
 
 1st Edition by [Rejwana Haque](https://apps.ualberta.ca/catalogue/instructor/rejwana1)
 
-This text is heavily inspired by the UC Berkeley course [Data 8: Foundations of Data Science][data8].
+This text is heavily inspired by the UC Berkeley course [Data 8: Foundations of Data Science][data8] and [Data 100: Principles and Techniques of Data Science][data100] with modifications to fit the CMPUT 191 course..
 
 You can [view this text online][ghpages] or [view the source][source].
 
-[data8]: http://data8.org/
+[data8]: https://inferentialthinking.com/chapters/intro.html
+[data100]: https://olebo.github.io/textbook/
 [ghpages]: https://uofa-cmput191.github.io/referencebook/
 [source]: https://github.com/uofa-cmput191/referencebook
 
