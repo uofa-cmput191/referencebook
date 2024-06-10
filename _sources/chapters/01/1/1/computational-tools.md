@@ -12,12 +12,7 @@ conclusions. We will explore the most common libraries used by data scientists c
 You are not at all restricted to using this web-based programming environment.
 A Python program can be executed by any computer, regardless of its
 manufacturer or operating system, provided that support for the language is
-installed. If you wish to install the version of Python and its accompanying
-libraries that will match this text, we recommend the [Anaconda][download]
-distribution that packages together the Python 3 language interpreter, IPython
-libraries, and the Jupyter notebook environment.
-
-   [download]: http://continuum.io/downloads
+installed. 
 
 This text includes a complete introduction to all of these computational tools.
 You will learn to write programs, generate images from data, and work with
