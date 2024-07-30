@@ -48,5 +48,7 @@ sections:
     title: Cross-Classifying by More than One Variable
   - file: chapters/03/4/Applying_a_Function_to_a_Column
     title: Manipulation and Transformation
+  - file: chapters/03/5/Joining_Tables_by_Columns
+    title: Joining Tables by Columns
 
 

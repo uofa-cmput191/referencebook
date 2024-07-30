@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Joining Tables by Columns &#8212; Introduction to Data Science</title>
+    <title>3.5. Joining Tables by Columns &#8212; Introduction to Data Science</title>
   
   
   
@@ -75,6 +75,7 @@
     <link rel="icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="3.4. Manipulation and Transformation of Tabular data" href="../4/Applying_a_Function_to_a_Column.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -136,8 +137,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -183,7 +182,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01/what-is-data-science.html">1. Data Science</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../01/1/intro.html">1.1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../01/1/1/computational-tools.html">1.1.1. Computational Tools</a></li>
@@ -205,11 +204,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../02/5/endnote.html">2.5. Endnote</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables.html">3. Working with Tabular Data</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Tables.html">3. Working with Tabular Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../1/Index-Slice.html">3.1. Selecting and Sorting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2/Classifying_by_One_Variable.html">3.2. Classifying by One Variable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../3/Cross-Classifying_by_More_than_One_Variable.html">3.3. Cross-Classifying by More than One Variable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4/Applying_a_Function_to_a_Column.html">3.4. Manipulation and Transformation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. Joining Tables by Columns</a></li>
 </ul>
 </li>
 </ul>
@@ -352,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -368,6 +370,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-rise-of-house-price-with-population-growth">3.5.1. Example: Rise of House Price with Population Growth</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -380,7 +390,7 @@ document.write(`
   <div class="cell tag_remove-input docutils container">
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="joining-tables-by-columns">
-<h1>Joining Tables by Columns<a class="headerlink" href="#joining-tables-by-columns" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3.5. </span>Joining Tables by Columns<a class="headerlink" href="#joining-tables-by-columns" title="Link to this heading">#</a></h1>
 <p>Often, data about the same individuals is maintained in more than one table. For example, one university office might have data about each student’s time to completion of degree, while another has data about the student’s tuition and financial aid.</p>
 <p>To understand the students’ experience, it may be helpful to put the two datasets together. If the data are in two tables, each with one row per student, then we would want to put the columns together, making sure to match the rows so that each student’s information remains on a single row.</p>
 <p>Let us do this in the context of a simple example, and then use the method with a larger dataset.</p>
@@ -644,6 +654,161 @@ document.write(`
 </table></div></div>
 </div>
 <p>Notice how the strawberry cones have disappeared. None of the reviews are for strawberry cones, so there is nothing to which the <code class="docutils literal notranslate"><span class="pre">strawberry</span></code> rows can be joined. This might be a problem, or it might not be - that depends on the analysis we are trying to perform with the joined table.</p>
+<section id="example-rise-of-house-price-with-population-growth">
+<h2><span class="section-number">3.5.1. </span>Example: Rise of House Price with Population Growth<a class="headerlink" href="#example-rise-of-house-price-with-population-growth" title="Link to this heading">#</a></h2>
+<p>In this section, we will explore one of the most common use cases of join operations: finding associations between different quantities. As a data scientist, you often need to determine the relationship between variables collected from different tables or sources.</p>
+<p>For instance, you might pose the question:
+<strong>“Does population growth impact the rise in housing prices in Canada?”</strong></p>
+<p>To investigate this, let’s start by displaying the two Tables we will use for our analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Population</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Geography</th> <th>%Growth</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Canada                   </td> <td>1.33817 </td>
+        </tr>
+        <tr>
+            <td>Newfoundland and Labrador</td> <td>0.586049</td>
+        </tr>
+        <tr>
+            <td>Prince Edward Island     </td> <td>3.11166 </td>
+        </tr>
+        <tr>
+            <td>Nova Scotia              </td> <td>2.06409 </td>
+        </tr>
+        <tr>
+            <td>New Brunswick            </td> <td>1.7461  </td>
+        </tr>
+        <tr>
+            <td>Quebec                   </td> <td>0.741916</td>
+        </tr>
+        <tr>
+            <td>Ontario                  </td> <td>1.53469 </td>
+        </tr>
+        <tr>
+            <td>Manitoba                 </td> <td>1.21465 </td>
+        </tr>
+        <tr>
+            <td>Saskatchewan             </td> <td>0.40151 </td>
+        </tr>
+        <tr>
+            <td>Alberta                  </td> <td>1.06825 </td>
+        </tr>
+    </tbody>
+</table>
+<p>... (4 rows omitted)</p></div></div>
+</div>
+<p>This Table contains information on the population growth in different provinces in Canada for the year of 2021-2022.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Houseprice</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Area</th> <th>y/y % change</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Canada                   </td> <td>21          </td>
+        </tr>
+        <tr>
+            <td>British Columbia         </td> <td>23.3        </td>
+        </tr>
+        <tr>
+            <td>Alberta                  </td> <td>10          </td>
+        </tr>
+        <tr>
+            <td>Manitoba                 </td> <td>11.2        </td>
+        </tr>
+        <tr>
+            <td>Saskatchewan             </td> <td>7           </td>
+        </tr>
+        <tr>
+            <td>Ontario                  </td> <td>25.6        </td>
+        </tr>
+        <tr>
+            <td>Quebec                   </td> <td>16.3        </td>
+        </tr>
+        <tr>
+            <td>Newfoundland and Labrador</td> <td>11.9        </td>
+        </tr>
+        <tr>
+            <td>Nova Scotia              </td> <td>23.2        </td>
+        </tr>
+        <tr>
+            <td>New Brunswick            </td> <td>32          </td>
+        </tr>
+    </tbody>
+</table>
+<p>... (3 rows omitted)</p></div></div>
+</div>
+<p>This Table contains information on rise in houseing prices in different provinces Canada for the year of 2021-2022.</p>
+<p>To analyze the relationship between population growth and housing prices change, we need to combine these two DataFrames based on the common <code class="docutils literal notranslate"><span class="pre">Area</span></code> and <code class="docutils literal notranslate"><span class="pre">Geography</span></code> columns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Population</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Geography&#39;</span><span class="p">,</span> <span class="n">Houseprice</span><span class="p">,</span> <span class="s1">&#39;Area&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+    <thead>
+        <tr>
+            <th>Geography</th> <th>%Growth</th> <th>y/y % change</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Alberta                  </td> <td>1.06825 </td> <td>10          </td>
+        </tr>
+        <tr>
+            <td>British Columbia         </td> <td>2.05526 </td> <td>23.3        </td>
+        </tr>
+        <tr>
+            <td>Canada                   </td> <td>1.33817 </td> <td>21          </td>
+        </tr>
+        <tr>
+            <td>Manitoba                 </td> <td>1.21465 </td> <td>11.2        </td>
+        </tr>
+        <tr>
+            <td>New Brunswick            </td> <td>1.7461  </td> <td>32          </td>
+        </tr>
+        <tr>
+            <td>Newfoundland and Labrador</td> <td>0.586049</td> <td>11.9        </td>
+        </tr>
+        <tr>
+            <td>Nova Scotia              </td> <td>2.06409 </td> <td>23.2        </td>
+        </tr>
+        <tr>
+            <td>Ontario                  </td> <td>1.53469 </td> <td>25.6        </td>
+        </tr>
+        <tr>
+            <td>Prince Edward Island     </td> <td>3.11166 </td> <td>17.6        </td>
+        </tr>
+        <tr>
+            <td>Quebec                   </td> <td>0.741916</td> <td>16.3        </td>
+        </tr>
+    </tbody>
+</table>
+<p>... (2 rows omitted)</p></div></div>
+</div>
+<p>As we have both qualtities on the same Table we can proceed with our further analysis.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -676,6 +841,15 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../4/Applying_a_Function_to_a_Column.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3.4. </span>Manipulation and Transformation of Tabular data</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -683,7 +857,20 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-rise-of-house-price-with-population-growth">3.5.1. Example: Rise of House Price with Population Growth</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
