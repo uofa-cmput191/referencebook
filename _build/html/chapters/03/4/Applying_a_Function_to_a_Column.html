@@ -218,6 +218,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../05/1/Conditional_Statements.html">5.1. Conditional Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../05/2/Iteration.html">5.2. Iteration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../05/3/Simulation.html">5.3. Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05/4/Finding_Probabilities.html">5.4. Finding Probabilities</a></li>
 </ul>
 </li>
 </ul>
@@ -545,7 +546,7 @@ document.write(`
 </section>
 <section id="functions-as-values">
 <h2><span class="section-number">3.4.2. </span>Functions as Values<a class="headerlink" href="#functions-as-values" title="Link to this heading">#</a></h2>
-<p>We’ve seen that Python has many kinds of values.  For example, <code class="docutils literal notranslate"><span class="pre">6</span></code> is a number value, <code class="docutils literal notranslate"><span class="pre">&quot;cake&quot;</span></code> is a text value, <code class="docutils literal notranslate"><span class="pre">Table()</span></code> is an empty table, and <code class="docutils literal notranslate"><span class="pre">ages</span></code> is a name for a table value (since we defined it above).</p>
+<p>We’ve seen that Python has many kinds of values.  For example, <code class="docutils literal notranslate"><span class="pre">6</span></code> is a number value, <code class="docutils literal notranslate"><span class="pre">&quot;cake&quot;</span></code> is a text value, <code class="docutils literal notranslate"><span class="pre">Table()</span></code> is an empty table, and <code class="docutils literal notranslate"><span class="pre">students</span></code> is a name for a table value (since we defined it above).</p>
 <p>In Python, every function, including <code class="docutils literal notranslate"><span class="pre">categorize_score</span></code>, is also a value. It helps to think about recipes again. A recipe for cake is a real thing, distinct from cakes or ingredients, and you can give it a name like “Ani’s cake recipe.” When we defined <code class="docutils literal notranslate"><span class="pre">categorize_score</span></code> with a <code class="docutils literal notranslate"><span class="pre">def</span></code> statement, we actually did two separate things: we created a function that converts a score to letter grade, and we gave it the name <code class="docutils literal notranslate"><span class="pre">categorize_score</span></code>.</p>
 <p>We can refer to any function by writing its name, without the parentheses or arguments necessary to actually call it. We did this when we called <code class="docutils literal notranslate"><span class="pre">apply</span></code> above.  When we write a function’s name by itself as the last line in a cell, Python produces a text representation of the function, just like it would print out a number or a string value.</p>
 <div class="cell docutils container">
@@ -732,7 +733,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">Population</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;Jan 2022&#39;</span><span class="p">,</span> <span class="s1">&#39;Jan 2021&#39;</span><span class="p">)</span>
 
 <span class="nn">File /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/datascience/tables.py:536,</span> in <span class="ni">Table.apply</span><span class="nt">(self, fn, *column_or_columns)</span>
@@ -740,7 +741,7 @@ document.write(`
 <span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="n">rows</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">*</span><span class="n">column_or_columns</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">536</span> <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">])</span>
 
-<span class="nn">Cell In[40], line 1,</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(x, y)</span>
+<span class="nn">Cell In[18], line 1,</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(x, y)</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">Population</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;Jan 2022&#39;</span><span class="p">,</span> <span class="s1">&#39;Jan 2021&#39;</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: unsupported operand type(s) for -: &#39;numpy.str_&#39; and &#39;numpy.str_&#39;
