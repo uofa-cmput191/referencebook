@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Causality and Experiments &#8212; Introduction to Data Science</title>
+    <title>4. Visualization &#8212; Introduction to Data Science</title>
   
   
   
@@ -70,13 +70,13 @@
                 gtag('config', 'UA-148221575-1');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02/causality-and-experiments';</script>
-    <link rel="canonical" href="https://uofa-cmput191.github.io/referencebook/chapters/02/causality-and-experiments.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/04/Visualization';</script>
+    <link rel="canonical" href="https://uofa-cmput191.github.io/referencebook/chapters/04/Visualization.html" />
     <link rel="icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.1. Observation and Visualization: John Snow and the Broad Street Pump" href="1/observation-and-visualization-john-snow-and-the-broad-street-pump.html" />
-    <link rel="prev" title="1.6. Summary" href="../01/6/Summary-1.html" />
+    <link rel="next" title="5. Randomness" href="../05/Randomness.html" />
+    <link rel="prev" title="3.5. Joining Tables by Columns" href="../03/5/Joining_Tables_by_Columns.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -197,12 +197,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../01/6/Summary-1.html">1.6. Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Causality and Experiments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="1/observation-and-visualization-john-snow-and-the-broad-street-pump.html">2.1. John Snow and the Broad Street Pump</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2/snow-s-grand-experiment.html">2.2. Snow’s “Grand Experiment”</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3/establishing-causality.html">2.3. Establishing Causality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4/randomization.html">2.4. Randomization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5/endnote.html">2.5. Endnote</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02/causality-and-experiments.html">2. Causality and Experiments</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02/1/observation-and-visualization-john-snow-and-the-broad-street-pump.html">2.1. John Snow and the Broad Street Pump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02/2/snow-s-grand-experiment.html">2.2. Snow’s “Grand Experiment”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02/3/establishing-causality.html">2.3. Establishing Causality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02/4/randomization.html">2.4. Randomization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02/5/endnote.html">2.5. Endnote</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../03/Tables.html">3. Working with Tabular Data</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -213,7 +213,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../03/5/Joining_Tables_by_Columns.html">3.5. Joining Tables by Columns</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../04/Visualization.html">4. Visualization</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Visualization</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../05/Randomness.html">5. Randomness</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../05/1/Conditional_Statements.html">5.1. Conditional Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../05/2/Iteration.html">5.2. Iteration</a></li>
@@ -289,7 +289,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/02/causality-and-experiments.md" target="_blank"
+      <li><a href="../../_sources/chapters/04/Visualization.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +299,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -371,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Causality and Experiments</h1>
+    <h1>Visualization</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,41 +385,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="causality-and-experiments">
-<h1><span class="section-number">2. </span>Causality and Experiments<a class="headerlink" href="#causality-and-experiments" title="Link to this heading">#</a></h1>
-<p><em>“These problems are, and will probably ever remain, among the inscrutable
-secrets of nature. They belong to a class of questions radically inaccessible to
-the human intelligence.”</em> —The Times of London, September 1849, on how cholera
-is contracted and spread</p>
-<p>Does the death penalty have a deterrent effect? Is chocolate good for you? What
-causes breast cancer?</p>
-<p>All of these questions attempt to assign a cause to an effect. A careful
-examination of data can help shed light on questions like these. In this section
-you will learn some of the fundamental concepts involved in establishing
-causality.</p>
-<p>Observation is a key to good science. An <em>observational study</em> is one in which
-scientists make conclusions based on data that they have observed but had no
-hand in generating. In data science, many such studies involve observations on a
-group of individuals, a factor of interest called a <em>treatment</em>, and an
-<em>outcome</em> measured on each individual.</p>
-<p>It is easiest to think of the individuals as people. In a study of whether
-chocolate is good for the health, the individuals would indeed be people, the
-treatment would be eating chocolate, and the outcome might be a measure of heart disease. But individuals in observational studies need not be people. In a
-study of whether the death penalty has a deterrent effect, the individuals could
-be the 50 states of the union. A state law allowing the death penalty would be
-the treatment, and an outcome could be the state’s murder rate.</p>
-<p>The fundamental question is whether the treatment has an effect on the outcome.
-Any relation between the treatment and the outcome is called an <em>association</em>.
-If the treatment causes the outcome to occur, then the association is <em>causal</em>.
-<em>Causality</em> is at the heart of all three questions posed at the start of this
-section. For example, one of the questions was whether chocolate directly causes
-improvements in health, not just whether there there is a relation between
-chocolate and health.</p>
-<p>The establishment of causality often takes place in two stages. First, an
-association is observed. Next, a more careful analysis leads to a decision about
-causality.</p>
-<div class="toctree-wrapper compound">
+  <div class="cell tag_remove-input docutils container">
 </div>
+<section class="tex2jax_ignore mathjax_ignore" id="visualization">
+<h1><span class="section-number">4. </span>Visualization<a class="headerlink" href="#visualization" title="Link to this heading">#</a></h1>
+<p>Tables are a powerful way of organizing and visualizing data. However, large tables of numbers can be difficult to interpret, no matter how organized they are. Sometimes it is much easier to interpret graphs than numbers.</p>
+<p>In this chapter we will develop some of the fundamental graphical methods of data analysis. Our source of data is the <a class="reference external" href="http://www.imdb.com">Internet Movie Database</a>, an online database that contains information about movies, television shows, video games, and so on. The site <a class="reference external" href="http://www.boxofficemojo.com">Box Office Mojo</a> provides many summaries of IMDB data, some of which we have adapted. We have also used data summaries from <a class="reference external" href="http://www.the-numbers.com">The Numbers</a>, a site with a tagline that says it is “where data and the movie business meet.”</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -435,7 +406,7 @@ causality.</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters/02"
+            path: "./chapters/04"
         },
         predefinedOutput: true
     }
@@ -453,20 +424,20 @@ causality.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../01/6/Summary-1.html"
+       href="../03/5/Joining_Tables_by_Columns.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.6. </span>Summary</p>
+        <p class="prev-next-title"><span class="section-number">3.5. </span>Joining Tables by Columns</p>
       </div>
     </a>
     <a class="right-next"
-       href="1/observation-and-visualization-john-snow-and-the-broad-street-pump.html"
+       href="../05/Randomness.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Observation and Visualization: John Snow and the Broad Street Pump</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Randomness</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
